@@ -1,0 +1,11 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Page:page2{% endblock %}
+
+{% block body %}
+<div class="cont">
+    <h1>Sudoku:</h1>
+    Zasady gry Sudoku są bardzo proste. Kwadratowy diagram gry podzielony jest na 9 identycznych kwadratów. Każdy z nich jest podzielony na 9 kolejnych. Zadaniem gracza jest wypełnienie wszystkich 81 kwadratów, na które podzielony jest diagram cyframi od 1 do 9. W każdym rzędzie i każdej kolumnie dana cyfra może wystapić jedynie raz. Podobnie w każdym z 9 większych kwadratów - cyfry nie mogą się w nich powtarzać.
+<img src="{{ asset('bundles/framework/images/ex.jpg') }}" style="margin-top: 30px;" />
+</div>
+{% endblock %}

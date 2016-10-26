@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Moja strona {% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <!-- CZCIONKI Z GOOGLE WEB FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&amp;subset=greek-ext" rel="stylesheet">
+        <link href="{{ asset('bundles/framework/css/site.css') }}" rel="stylesheet" type="text/css" />
+        <!-- sudoku js game asset: core js for functionality -->
+        <link href="{{ asset('bundles/framework/css/sudokuJS.css') }}" rel="stylesheet" type="text/css" />
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <ul class="t">
+            <li><a href="{{ path('homepage') }}">Home</a></li>
+            <li><a href="{{ path('index_page') }}">Link do index</a></li>
+            <li><a href="{{ path('page1') }}">Zagraj!</a></li>
+            <li><a href="{{ path('page2') }}">Zasady gry</a></li>
+        </ul>
+        <div class="cont">
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+        </div>
+    </body>
+</html>
